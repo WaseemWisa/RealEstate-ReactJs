@@ -1,0 +1,16 @@
+@use '../../../../Styles/variables' as *;
+@use '../../../../Styles/mixins' as *;
+.info {
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+  @include BreakPoints(sm) {
+    grid-template-columns: repeat(auto-fill , minmax(280px , 1fr));
+  }
+  gap: 0.5rem;
+  .col {
+    border: 1px solid #ddd;
+    @include Flex(center , center);
+    flex-direction: column;
+    padding: 1rem;
+  }
+}

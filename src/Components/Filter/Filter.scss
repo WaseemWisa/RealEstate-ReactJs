@@ -1,0 +1,32 @@
+@use '../../Styles/variables' as *;
+@use '../../Styles/mixins' as *; 
+#filter {
+/*   .container {
+    height: fit-content;
+  } */
+  .fileter-select {
+    width: 85%;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 0 auto;
+    @include Flex(center, space-around);
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+    top: -3rem;
+    .dropdown-holder {
+      @include Flex(center, center);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .mantine-MultiSelect-input {
+      height: 60px;
+      @include Flex(center, null);
+    }
+    .btn-shape {
+      height: 60px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@use '../../../../Styles/variables' as *;
+@use '../../../../Styles/mixins' as *;
+#hero {
+  background-color: $section-bg-1;
+  height: 450px;
+  position: relative;
+  .container  {
+    .holder {
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill , minmax(500px , 1fr));
+      align-items: center;
+      img {
+        width: 100%;
+        @media (max-width: 900px) {
+          display: none;
+        }
+      }
+      .btn-holder {
+        flex-wrap: wrap;
+        @include Flex(start, null);
+        gap: 0.2rem;
+        @include BreakPoints(sm) {
+          flex-direction: column;
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,77 @@
+@use './mixins' as *;
+@use './variables' as * ;
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+.label {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 9999px;
+  background-color: #ff5a3c2b;
+  color: $secondary-color;
+}
+.sec {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $heading-color;
+    clear: both;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    font-size: 24px;
+    @include BreakPoints(sm) {
+      font-size: 20px;
+    }
+}
+.desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: $paragraph-color;
+}
+
+
+.border-bottom {
+  position: relative;
+  &::before {
+    content: '';
+    width: 0; height: 3px;
+    position: absolute;
+    bottom: 0; left: 0;
+    background-color: $secondary-color;
+    transition: 0.3s;
+  }
+  &:hover {
+    .btn {
+      color: $secondary-color;
+    }
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.info-list {
+  @include Flex(start ,null);
+  li {
+    @include Flex(start ,null);
+    flex-direction: column;
+    gap: 0.5rem;
+    color: $paragraph-color;
+    padding: 0 1rem;
+    &:not(:last-child) {
+      border-right: 1px solid $paragraph-color;
+    }
+    &:first-child {
+      padding: 0 1rem 0 0 !important;
+    }
+  }
+}
+
+.w-full {
+  width: 100%;
+}

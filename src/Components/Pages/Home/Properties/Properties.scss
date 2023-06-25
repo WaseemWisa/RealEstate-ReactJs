@@ -1,0 +1,78 @@
+@use '../../../../Styles/variables' as *;
+@use '../../../../Styles/mixins' as *;
+
+#properties {
+  .container {
+    .product-card {
+      box-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
+      margin: 1rem;
+      user-select: none;
+      .product-img {
+        position: relative;
+        img {
+          width: 100%;
+        }
+        .badge {
+          position: absolute;
+          top: 20px;
+          background-color: rgba(0, 128, 0, 0.822);
+          right: 20px;
+          text-transform: capitalize; color: #fff;
+          padding: 5px;
+          
+        }
+      }
+      .product-agent-info , .product-info {
+        padding: 1rem;
+      }
+      .product-info {
+        
+        .price {
+          color: $secondary-color;
+          font-size: 18px;
+          font-weight: 600;
+        }
+        .title  {
+          margin: 0.5rem 0 0;
+        }
+        .desc {
+          margin: 1rem 0;
+          font-size: 14px;
+        }
+        .info-list {
+          font-size: 0.9rem;
+        }
+      }
+      .product-agent-info {
+        @include Flex(start , space-between);
+        .agent-info {
+          @include Flex(center , null);
+          gap: 0.5rem;
+          img {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+          }
+          div {
+            @include Flex(start , null);
+            flex-direction: column;
+            gap: 0.2rem;
+            span {
+              font-weight: 500
+            }
+          }
+        }
+        .btn-list {
+          @include Flex(center , center);
+          gap: 0.2rem;
+          li {
+            @include Flex(center , center);
+            background-color: $section-bg-1;
+            width: 40px; height: 40px;
+            color: $paragraph-color;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@use '../../../../Styles/mixins' as *;
+@use '../../../../Styles/variables' as *;
+#feedback {
+  @include SetBg(url('../../../../Assets/images/testimonial.jpg'), top center , auto);
+  background-repeat: no-repeat;
+}

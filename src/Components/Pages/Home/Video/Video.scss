@@ -1,0 +1,27 @@
+@use '../../../../Styles/variables' as *;
+@use '../../../../Styles/mixins' as *;
+#video {
+  @include SetBg(url('../../../../Assets/images/property1.jpg'), center , cover);
+  height: 300px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: #0000001e;
+    width: 100%; height: 100%;
+    left: 0; top: 0;
+  }
+  @include Flex(center, center);
+  .circle {
+    z-index: 9999;
+    position: relative;
+    @include Flex(center, center);
+    background-color: #fff;
+    height: 70px; width: 70px;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: $secondary-color;
+    cursor: pointer;
+  }
+}

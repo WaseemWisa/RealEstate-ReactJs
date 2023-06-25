@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90.5" height="84.584" viewBox="0 0 90.5 84.584">
+  <defs>
+    <filter id="Path_61139" x="18.5" y="0" width="72" height="72" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood flood-color="#ff5a3c" flood-opacity="0"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon" transform="translate(-553 -10095.367)">
+    <g transform="matrix(1, 0, 0, 1, 553, 10095.37)" filter="url(#Path_61139)">
+      <path id="Path_61139-2" data-name="Path 61139" d="M13.5,0A13.5,13.5,0,1,1,0,13.5,13.5,13.5,0,0,1,13.5,0Z" transform="translate(41 21.5)" fill="#ff5a3c" opacity="0.16"/>
+    </g>
+    <g id="Group_7234" data-name="Group 7234" transform="translate(553 9811.951)">
+      <g id="Group_7231" data-name="Group 7231">
+        <g id="Group_7230" data-name="Group 7230">
+          <path id="Path_61137" data-name="Path 61137" d="M57.853,311.97H1.286A1.254,1.254,0,0,0,0,313.188v53.594A1.254,1.254,0,0,0,1.286,368H9a1.254,1.254,0,0,0,1.286-1.218v-1.218H47.568a1.318,1.318,0,0,0,.909-.357l7.714-7.308a1.187,1.187,0,0,0,.376-.861V321.715h1.286a1.254,1.254,0,0,0,1.286-1.218v-7.309A1.254,1.254,0,0,0,57.853,311.97ZM7.714,365.564H2.571V321.715H7.714Zm0-46.285H2.571v-4.873H7.714ZM54,356.533l-6.96,6.6h-.754V355.82H54Zm0-3.149H45a1.253,1.253,0,0,0-1.286,1.218v8.526H10.285V341.2h6.428a1.22,1.22,0,1,0,0-2.436H10.285V321.715h18v6.09a1.287,1.287,0,0,0,2.571,0v-6.09H54Zm2.571-34.105H10.285v-4.873H56.567Z" fill="#ff5a3c"/>
+        </g>
+      </g>
+      <g id="Group_7233" data-name="Group 7233">
+        <g id="Group_7232" data-name="Group 7232">
+          <path id="Path_61138" data-name="Path 61138" d="M29.569,333.895a1.254,1.254,0,0,0-1.285,1.218v3.654H24.427a1.22,1.22,0,1,0,0,2.436h5.142a1.253,1.253,0,0,0,1.286-1.218v-4.872A1.254,1.254,0,0,0,29.569,333.895Z" fill="#ff5a3c"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

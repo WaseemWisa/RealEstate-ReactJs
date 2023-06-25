@@ -1,0 +1,38 @@
+/* Flex Mixin */
+@mixin Flex( $items-center, $justify-content) {
+  display: flex;
+  align-items: $items-center;
+  justify-content: $justify-content;
+}
+
+/* Background Img Mixin */
+@mixin SetBg( $url, $position, $size) {
+  background-image: $url;
+  background-position: $position;
+  background-size: $size;
+}
+
+/* Media Query */
+
+@mixin BreakPoints($point) {
+  @if $point == sm {
+    @media  (max-width: 480px){
+      @content;
+    }
+  }
+  @if $point == md {
+    @media (min-width: 481px) and (max-width: 768px){
+      @content;
+    }
+  }
+  @if $point == lg {
+    @media (min-width: 769px) and (max-width: 1023px){
+      @content;
+    }
+  }
+  @if $point == xl {
+    @media (min-width: 1024px) and (max-width: 1200px){
+      @content;
+    }
+  }
+}

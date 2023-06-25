@@ -1,0 +1,16 @@
+@use './base' as *;
+@use './variables' as *;
+@use './mixins' as *;
+@use './_components.scss' as *;
+@use './reset' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+
+main {
+  font-family: $heading-font;
+  min-width: 100%;
+  overflow: hidden;
+}

@@ -1,0 +1,22 @@
+@use '../../Styles/variables' as *;
+@use '../../Styles/mixins' as *;
+.heading {
+    @include Flex(center, center);
+    flex-direction: column;
+    width: 500px; max-width: 100%;
+    user-select: none;
+    margin-left: auto;
+    margin-right: auto;
+    .title {
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: $heading-color;
+      margin-top: 1rem;
+      @include BreakPoints(sm) {
+        & {
+          font-size: 35px;
+        }
+      }
+    }
+}

@@ -1,0 +1,31 @@
+@use '../../../../Styles/variables' as *;
+@use '../../../../Styles/mixins' as *;
+
+#sells {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 0.5rem;
+    .fets {
+      @include Flex(start ,null);
+      flex-direction: column;
+      margin: 2rem 0;
+      .fet {
+        position: relative;
+        display: flex;
+        padding-left: 25px;
+        text-transform: capitalize;
+        margin: 1rem 0;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 15px; height: 2px;
+          background-color: $secondary-color;
+          top: 50%; left: 0;
+        }
+      }
+    }
+
+  }
+}

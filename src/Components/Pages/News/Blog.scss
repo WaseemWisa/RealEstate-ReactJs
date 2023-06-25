@@ -1,0 +1,57 @@
+@use '../../../Styles/variables' as *;
+@use '../../../Styles/mixins' as *;
+#blog {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 1rem;
+    .card {
+      box-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
+      .img-holder {
+        img {
+          width: 100%;
+        }
+      }
+      .content {
+        padding: 1.5rem;
+        .tags,.tag,.date {
+          gap: 0.5rem;
+          @include Flex(center, null);
+          color: $paragraph-color;
+          .i {
+            color: $secondary-color;
+          }
+        }
+        .title {
+          font-size: 22px;
+          font-weight: 600
+        }
+        .bottom {
+          @include Flex(center, space-between);
+          border-top: 1px solid #ddd;
+          padding-top: 1rem;
+          .btn {
+            background: none;
+            border: none;
+            color: $secondary-color
+          }
+        }
+      }
+    }
+  }
+
+}
+    .mantine-Group-root {
+      justify-content: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .mantine-Pagination-control	 {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      @include BreakPoints(sm) {
+        width: 35px;
+        height: 35px;
+      }
+    }

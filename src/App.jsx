@@ -1,0 +1,29 @@
+import { Routes , Route} from 'react-router-dom';
+/*  Css */
+import './Styles/index.scss'
+import './Assets/normalize.css';
+/* Pages */
+import Home from './Pages/Home';
+import About from './Pages/About';
+/* Header & Footer */
+import MainLayout from './Components/MainLayout';
+import News from './Pages/News';
+import Contact from './Pages/Contact';
+
+
+
+
+function App() {
+  return (
+    <Routes>
+      <Route  element={<MainLayout/>}>
+        <Route index path='/' element={<Home/>} />
+        <Route  path='/about' element={<About/>} />
+        <Route  path='/blog' element={<News/>} />
+        <Route  path='/contact' element={<Contact/>} />
+      </Route>
+    </Routes>
+  )
+}
+
+export default App

@@ -1,0 +1,41 @@
+@use './mixins' as *;
+@use './variables' as * ;
+
+.btn-shape {
+  width: 190px;
+  border: 1px solid $secondary-color;
+  height: 60px;
+  position: relative;
+  z-index: 99;
+  transition: border  0;
+  background-color: $secondary-color;
+  color: #fff;
+  &::before {
+    content: '';
+    height: 100%; width: 0;
+    position: absolute;
+    top: 0; left: 0;
+    transition: width 0.3s;
+    z-index: -1;
+    background-color: #fff;
+    
+  }
+  &:hover {
+    color: #000;
+    border-color: #000;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+.circle {
+  @include Flex(center, center);
+  background-color: #fff;
+  height: 70px; width: 70px;
+  border-radius: 50%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: $secondary-color;
+  cursor: pointer;
+}
