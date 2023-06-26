@@ -1,0 +1,22 @@
+@use '../../../Styles/variables' as *;
+@use '../../../Styles/mixins' as *;
+
+#shop {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    .left-col {
+      flex-basis: 70%;
+      @include BreakPoints(sm) {
+        & {
+          background-color: blueviolet;
+          flex-basis: 100%;
+        }
+      }
+    }
+    .right-col {
+      flex: 1;
+    }
+  }
+}
+

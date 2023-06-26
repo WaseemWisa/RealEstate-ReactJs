@@ -9,6 +9,7 @@ import About from './Pages/About';
 import MainLayout from './Components/MainLayout';
 import News from './Pages/News';
 import Contact from './Pages/Contact';
+import Shop from './Pages/Shop';
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route  path='/about' element={<About/>} />
         <Route  path='/blog' element={<News/>} />
         <Route  path='/contact' element={<Contact/>} />
+        <Route  path='/shop' element={<Shop/>} />
       </Route>
     </Routes>
   )

@@ -1,0 +1,16 @@
+@use '../../../../Styles/mixins' as *;
+@use '../../../../Styles/variables' as *;
+
+.right-col {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  .box {
+    .row {
+      @include Flex(center , space-between);
+      flex-direction: row;
+      margin-bottom: 1rem;
+      color: $paragraph-color !important;
+    }
+  }
+
+}
