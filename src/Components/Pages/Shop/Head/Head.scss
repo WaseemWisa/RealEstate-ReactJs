@@ -1,0 +1,65 @@
+@use '../../../../Styles/variables' as *;
+@use '../../../../Styles/mixins' as *;
+.head {
+  @include Flex(center , start);
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  @include BreakPoints(sm) {
+    & {
+      flex-direction: column;
+      @include Flex(start , start);
+    }
+  }
+  .icons  {
+    font-size: 1.7rem;
+    color: $paragraph-color;
+    @include BreakPoints(sm) {
+      display: none;
+    }
+    .icon {
+      margin-right: 0.5rem;
+      transition:  color 0.3s;
+      cursor: pointer;
+      &.active {
+        color: $secondary-color;
+      }
+    }
+  }
+  .filter-input {
+    position: relative;
+  }
+  .mantine-TextInput-input {
+    height: 45px;
+  }
+  .filter {
+    @include Flex(center , null);
+    gap: 0.5rem;
+    @include BreakPoints(sm) {
+      flex-direction: column;
+      width: 100%;
+      & {
+        .mantine-NativeSelect-root {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .filter-input {
+    display: block;
+    width: 100%;
+  }
+  .filter-input , .mantine-NativeSelect-wrapper {
+    @include BreakPoints(sm) {
+        margin-bottom: 0.5rem;
+    }
+  }
+  .icon-search {
+    position: absolute;
+    top: 0; right: 0;
+    height: 100%; width: 50px;
+    background-color: $secondary-color;
+    @include Flex(center , center);
+    color: #fff;
+    cursor: pointer;
+  }
+}

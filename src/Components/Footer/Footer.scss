@@ -1,0 +1,86 @@
+@use '../../Styles/variables' as *;
+@use '../../Styles/mixins' as *; 
+#footer { 
+  background-color: $primary-color-2;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    flex-wrap: wrap;
+    color: #fff;
+    width: 95%;
+    gap: 1.5rem;
+    @include BreakPoints(sm) {
+      grid-template-columns: repeat(1 , 1fr);
+    }
+    @include BreakPoints(md) {
+      grid-template-columns: repeat(2 , 1fr);
+    }
+    .col {
+      
+      h4 {
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        margin-top: 0
+      }
+      .social-icons {
+        @include Flex(center , null);
+        flex-direction: row;
+        gap: 1rem;
+
+        span {
+          transition: 0.3s;
+          cursor: pointer;
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+      ul {
+        padding: 1rem 0rem;
+        li {
+          font-weight: 400;
+          font-size: 14px;
+          margin-bottom: 1.5rem;
+          transition: 300ms;
+          cursor: pointer;
+          &:hover {
+            padding-left: 10px;
+            color: $secondary-color;
+          }
+        }
+      }
+      .paymentsImg {
+        width: 250px;
+      }
+    }
+  }
+}
+
+.end {
+  background-color: $primary-color;
+  .content {
+    @include Flex(center , space-between);
+    color: #fff;
+    padding: 1rem 2rem;
+    @include BreakPoints(sm) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    ul {
+      @include Flex(center , null);
+      gap: 1rem;
+      @include BreakPoints(sm) {
+        flex-direction: column;
+      }
+      li {
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

@@ -15,15 +15,18 @@
     gap: 1rem;
     padding: 1rem;
     position: relative;
-    top: -3rem;
+    margin-top: 2rem;
+    z-index: 99;
     .dropdown-holder {
-      @include Flex(center, center);
+      @include Flex(center, null);
       flex-wrap: wrap;
       gap: 0.5rem;
+
     }
-    .mantine-MultiSelect-input {
-      height: 60px;
-      @include Flex(center, null);
+
+    .mantine-NativeSelect-input {
+      width: 180px;
+      height: 50px;
     }
     .btn-shape {
       height: 60px;

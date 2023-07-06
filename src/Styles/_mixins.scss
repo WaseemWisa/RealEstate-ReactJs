@@ -20,6 +20,11 @@
       @content;
     }
   }
+  @if $point == mob {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
   @if $point == md {
     @media (min-width: 481px) and (max-width: 768px){
       @content;

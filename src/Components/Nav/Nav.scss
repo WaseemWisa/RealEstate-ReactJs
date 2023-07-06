@@ -1,0 +1,54 @@
+@use '../../Styles/variables' as *;
+@use '../../Styles/mixins' as *; 
+#nav {
+  background-color: $primary-color-2;
+    .container {
+      padding: 0.5rem 1rem;
+      @include Flex(center , null);
+      flex-wrap: wrap;
+      color: #fff;
+      cursor: pointer;
+      gap: 0.5rem;
+      .left-side {
+        flex: 1;
+        @include Flex(center , null);
+        flex-wrap: wrap;
+        gap: 1rem;
+        @include BreakPoints(sm) {
+          justify-content: center;
+        }
+          li {
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: 0.3s;
+            display: flex; 
+            flex-direction: row;
+            gap: 10px;
+            span {
+              @include Flex(center , null);
+            }
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+      }
+      .right-side {
+        flex: 1;
+        @include Flex(center , flex-end);
+        gap: 1rem;
+        .social-icons {
+          flex-direction: row;
+          @include Flex(center , null);
+          gap: 1rem;
+          li {
+            font-size: 1rem;
+            &:hover {
+              color: $secondary-color;
+              transition: 0.3s;
+            }
+          }
+        }
+      }
+    }
+}
+

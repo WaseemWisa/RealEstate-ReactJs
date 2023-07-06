@@ -1,11 +1,13 @@
 import { Fragment } from 'react'
 import { Outlet } from 'react-router-dom'
-import Header from './Header'
-import Footer from './Footer'
+import Nav from './Nav/Nav'
+import Footer from './Footer/Footer'
+import Header from './Header/Header'
 
 function MainLayout() {
   return (
     <Fragment>
+      <Nav/>
       <Header/>
         <Outlet/>
       <Footer/>

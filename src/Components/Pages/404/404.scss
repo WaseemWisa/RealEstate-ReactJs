@@ -1,0 +1,26 @@
+@use '../../../Styles/variables' as *;
+@use '../../../Styles/mixins' as *;
+#error {
+  @include Flex(center , center);
+  height: 100vh;
+
+  .container {
+    text-align: center;
+    .cover {
+      max-width: 100%;
+    }
+    .txt {
+      text-align: center;
+      margin: 0 auto;
+      width: 500px;
+      max-width: 100%;
+      h2 {
+        font-size: 35px;
+      }
+    }
+    .mantine-Button-label {
+      gap: 0.2rem;
+      text-transform: capitalize;
+    }
+  }
+}

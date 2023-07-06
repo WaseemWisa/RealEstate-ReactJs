@@ -1,0 +1,41 @@
+@use '../../../Styles/variables' as *;
+@use '../../../Styles/mixins' as *;
+
+#register {
+  .container {
+    .head-center {
+      text-align: center;
+      max-width: 400px;
+      margin: 3rem auto;
+      h2 {
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1.3;
+        @include BreakPoints(sm) {
+          font-size: 27px;
+        }
+      }
+      p {
+        @include BreakPoints(sm) {
+          font-size: 12px;
+        }
+      }
+    }
+    .mantine-TextInput-input {
+      height: 55px;
+      padding: 1rem 1.2rem;
+      border: 2px solid #ddd;
+      &:focus {
+        border-color:  $secondary-color;
+      }
+    }
+    .mantine-Checkbox-labelWrapper {
+      line-height: 1.6;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: $paragraph-color;
+      text-align: left;
+
+    }
+  }
+}

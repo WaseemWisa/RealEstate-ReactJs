@@ -1,0 +1,176 @@
+@use '../../Styles/variables' as *;
+@use '../../Styles/mixins' as *;
+#header {
+  .container {
+    @include Flex(center, space-between);
+    flex-direction: row;
+    .side {
+      flex: 1;
+    }
+    .middle-side {
+      display: flex;
+      gap: 2rem;
+      @include Flex(center, center);
+      cursor: pointer;
+      font-weight: 400;
+      a {
+        transition: 0.3s;
+        color: $paragraph-color;
+        text-decoration: none;
+        text-transform: capitalize;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+    .right-side {
+      @include Flex(center, flex-end);
+      gap: 1rem;
+      span {
+        padding: 1rem;
+        background-color: #fff;
+        box-shadow: 0 16px 32px 0 rgba(7, 28, 31, 0.1);
+        @include Flex(center, center);
+        cursor: pointer;
+        &:hover  {
+          transition: 0.3s;
+          color: #fff;
+          background-color: $secondary-color;
+        }
+      }
+      .drawer-icon {
+        display: none;
+      }
+    }
+    @include BreakPoints(mob) {
+      & {
+        flex-direction: column;
+      }
+      .middle-side {
+        display: none;
+      }
+      .drawer-icon {
+        display: block !important;
+      }
+    }
+  }
+}
+
+.img-holder, .drawer-side , .drawer-icons {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.mantine-Input-wrapper {
+  margin-bottom: 1rem;
+}
+.drawer-side {
+  li {
+    margin-bottom: 1rem;
+    color: $paragraph-color;
+  }
+}
+.drawer-main {
+  z-index: 2000;
+}
+.drawer-icons {
+  @include Flex(start, null);
+  flex-direction: column;
+  span {
+    @include Flex(center, start);
+    gap: 10px;
+    width: 100%;
+    font-size: 14px;
+    color: $paragraph-color;
+    .icon {
+      border: 2px solid #ddd;
+      margin-bottom: 10px;
+      padding: 1rem;
+    }
+  }
+}
+
+.drawer-socail {
+  flex-direction: row;
+  @include Flex(start, null);
+  gap: 0.5rem;
+  color: $paragraph-color;
+}
+
+
+
+.box , .total-price {
+  border-bottom: 1px solid #ddd;
+}
+.box {
+  @include Flex(center, null);
+  gap: 1rem;
+  flex-direction: row;
+  padding: 1rem 0;
+  h5 {
+    margin: 0 0 0.5rem;
+  }
+  img {
+    width: 120px;
+  }
+  .mantine-Indicator-indicator {
+    z-index: 2000;
+    height: 24px;
+    .icon > {
+      fill: white;
+    }
+    cursor: pointer;
+  }
+}
+
+.btns {
+
+}
+
+.total-price {
+  @include Flex(center, space-between);
+  h6 {
+    margin: 1rem 0;
+  }
+  .price {
+    font-weight: bold;
+    color: $secondary-color;
+    font-size: 1.2rem;
+  }
+}
+
+/* @keyframes fillAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+ */
+/* .fill-animation {
+  position: relative;
+  margin-right: 10px;
+  z-index: 1;
+  border: 1px solid transparent;
+  background-color: transparent;
+  &::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: $secondary-color;
+    transition: 0.3s;
+    border: transparent;
+    outline: transparent;
+    z-index: -1;
+  }
+  &:hover {
+    color: black;
+    &::before {
+      width: 100%;
+    }
+  }
+} */

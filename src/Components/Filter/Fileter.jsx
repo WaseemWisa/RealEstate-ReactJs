@@ -1,4 +1,4 @@
-import { MultiSelect } from '@mantine/core';
+import { NativeSelect } from '@mantine/core';
 
 import './Filter.scss';
 
@@ -16,19 +16,20 @@ function Fileter() {
     <div id="filter">
       <div className="fileter-select">
           <div className="dropdown-holder">
-            <MultiSelect
+            <NativeSelect
               data={data}
               placeholder="Choose Area"
               dropdownPosition="bottom"
               className='select'
             />
-            <MultiSelect
+            <NativeSelect
               data={data}
               placeholder="Choose Area"
               dropdownPosition="bottom"
               className='select'
+              clearable
             />
-            <MultiSelect
+            <NativeSelect
               data={data}
               placeholder="Choose Area"
               dropdownPosition="bottom"

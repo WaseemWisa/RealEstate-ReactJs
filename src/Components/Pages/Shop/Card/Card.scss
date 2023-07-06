@@ -1,0 +1,106 @@
+@use '../../../../Styles/variables' as *;
+@use '../../../../Styles/mixins' as *;
+.holder {
+  display: grid;
+  gap: 1rem;
+  padding-top: 2rem;
+  &.grid {
+    grid-template-columns: repeat( 2 , 1fr);
+  }
+  &.list {
+    grid-template-columns: repeat( 1 , 1fr);
+    .card {
+      @include Flex(center , null);
+      @include BreakPoints(sm) {
+        flex-direction: column;
+      }
+      border: 1px solid #ddd;
+      .img-holder {
+        height: 100%;
+        .cover {
+          height: 100%;
+          object-fit: cover;
+        }
+        @include BreakPoints(sm) {
+          flex-basis: 1;
+        }
+        flex-basis: 45%;
+      }
+      .content {
+        flex: 1;
+      }
+    }
+  }
+  /* 1 fr for small media  List And Grid View togher*/
+  @include BreakPoints(sm) {
+    grid-template-columns: repeat( 1 , 1fr) !important;
+  }
+  .card {
+    box-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
+    .img-holder {
+      overflow: hidden;
+      position: relative;
+      .cover {
+        width: 100%;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      .author-img {
+        position: absolute;
+        width: 40px; height: 40px;
+        border-radius: 50%;
+        right: 10px; top: 10px;
+        border: 2px solid #fff;
+      }
+    }
+    .content {
+      padding: 1rem;
+      .state {
+        color: $secondary-color;
+      }
+      h4 {
+        margin: 1rem 0;
+      }
+      .location {
+        @include Flex(center , null);
+        color: $paragraph-color;
+        .icon {
+          color: $secondary-color;
+        }
+      }
+      ul {
+        @include Flex(center , null);
+        gap: 0.5rem;
+        font-size: 14px;
+        color: $paragraph-color;
+        li {
+          margin-bottom: 1rem;
+          margin-top: 1rem;
+        }
+      }
+      .btns {
+        button {
+          background-color: $section-bg-1;
+          border: none;
+          margin-right: 10px;
+          width: 35px; height: 35px;
+          color: #a7a7a7;
+          line-height: 35px;
+          cursor: pointer;
+        }
+      }
+      .price {
+        margin-top: 1rem;
+        border-top: 1px solid #ddd;
+        width: 100%;
+        padding-top: 20px;
+        display: inline-block;
+        color: $secondary-color;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
