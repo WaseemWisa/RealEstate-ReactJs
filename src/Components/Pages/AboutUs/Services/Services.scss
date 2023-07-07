@@ -6,7 +6,9 @@
   background-color: $section-bg-1;
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center; 
+    align-items: center; 
     gap: 1.2rem;
     .box {
       position: relative;

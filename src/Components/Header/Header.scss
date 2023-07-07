@@ -56,7 +56,7 @@
   }
 }
 
-.img-holder, .drawer-side , .drawer-icons {
+.drawer-main .img-holder, .drawer-side , .drawer-icons {
   border-bottom: 1px solid #ddd;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
@@ -100,10 +100,10 @@
 
 
 
-.box , .total-price {
+.drawer-main .box , .total-price {
   border-bottom: 1px solid #ddd;
 }
-.box {
+.drawer-main .box {
   @include Flex(center, null);
   gap: 1rem;
   flex-direction: row;
@@ -117,15 +117,8 @@
   .mantine-Indicator-indicator {
     z-index: 2000;
     height: 24px;
-    .icon > {
-      fill: white;
-    }
     cursor: pointer;
   }
-}
-
-.btns {
-
 }
 
 .total-price {

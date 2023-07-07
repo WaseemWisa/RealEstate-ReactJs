@@ -3,12 +3,18 @@
 #team {
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center; 
+    align-items: center; 
     gap: 1rem;
     .box {
       transition: 0.3s;
       border: 1px solid #ddd;
       overflow: hidden;
+      flex-direction: column;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
       img {
         width: 100%;
       }

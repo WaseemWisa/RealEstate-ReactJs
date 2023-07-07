@@ -7,10 +7,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-
+main {
+  z-index: -1;
+  position: relative;
+}
 
 main,.main {
   font-family: $heading-font;
   min-width: 100%;
   overflow: hidden;
+  
 }

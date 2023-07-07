@@ -1,4 +1,4 @@
-import { Button } from '@mantine/core';
+import { List ,  Flex , Button } from '@mantine/core';
 import './Nav.scss';
 import {MdEmail} from 'react-icons/md';
 import {FaMapMarkerAlt} from 'react-icons/fa';
@@ -6,14 +6,13 @@ import {BsFacebook} from 'react-icons/bs';
 import {AiFillInstagram , AiFillTwitterCircle , AiFillDribbbleCircle} from 'react-icons/ai';
 function Nav() {
   return (
-    <nav id='nav' className='main'>
-      
+    <nav id='nav' className='main'> 
         <div className="container">
-          <ul className='left-side'>
+          <div  className='left-side side'>
             <li><span><MdEmail/></span>info@webmail.com</li>
             <li><span><FaMapMarkerAlt/></span>15/A, Nest Tower, NYC</li>
-          </ul>
-          <div className="right-side">
+          </div>
+          <div className="right-side side" >
             <ul className='social-icons'>
               <li><span><BsFacebook/></span></li>
               <li><span><AiFillInstagram/></span></li>
@@ -25,7 +24,6 @@ function Nav() {
             </Button>
           </div>
         </div>
-     
     </nav>
   )
 }

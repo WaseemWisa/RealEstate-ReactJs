@@ -2,6 +2,10 @@
 @use '../../Styles/mixins' as *; 
 #nav {
   background-color: $primary-color-2;
+  color: #fff;
+  .side {
+    flex: 1;
+  }
     .container {
       padding: 0.5rem 1rem;
       @include Flex(center , null);
@@ -10,7 +14,6 @@
       cursor: pointer;
       gap: 0.5rem;
       .left-side {
-        flex: 1;
         @include Flex(center , null);
         flex-wrap: wrap;
         gap: 1rem;
@@ -33,7 +36,6 @@
           }
       }
       .right-side {
-        flex: 1;
         @include Flex(center , flex-end);
         gap: 1rem;
         .social-icons {
