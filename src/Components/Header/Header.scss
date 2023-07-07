@@ -14,15 +14,7 @@
       cursor: pointer;
       font-weight: 400;
     }
-    a {
-      transition: 0.3s;
-      color: $paragraph-color;
-      text-decoration: none;
-      text-transform: capitalize;
-      &:hover {
-        color: $secondary-color;
-      }
-    }
+
     .right-side {
       @include Flex(center, flex-end);
       gap: 1rem;
@@ -55,7 +47,15 @@
     }
   }
 }
-
+a {
+  transition: 0.3s;
+  color: $paragraph-color;
+  text-decoration: none;
+  text-transform: capitalize;
+  &:hover {
+    color: $secondary-color;
+  }
+}
 .drawer-main .img-holder, .drawer-side , .drawer-icons {
   border-bottom: 1px solid #ddd;
   margin-bottom: 1rem;
