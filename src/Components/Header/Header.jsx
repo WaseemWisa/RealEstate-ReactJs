@@ -45,11 +45,11 @@ function Header() {
           className='input-search'
         />
         <ul className="drawer-side">
-            <li>Home</li>
-            <li>About</li>
-            <li>Shop</li>
-            <li>News</li>
-            <li>Contact</li>
+          <li><NavLink to="/">home</NavLink></li>
+          <li><NavLink to="/about">about</NavLink></li>
+          <li><NavLink to="/shop">shop</NavLink></li>
+          <li><NavLink to="/blog">blog</NavLink></li>
+          <li><NavLink to="/contact">contact</NavLink></li>
         </ul>
         <div className="drawer-icons">
           <span><BiSearch className='icon'/> Search</span>
