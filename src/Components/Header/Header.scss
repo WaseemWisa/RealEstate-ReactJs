@@ -13,14 +13,14 @@
       @include Flex(center, center);
       cursor: pointer;
       font-weight: 400;
-      a {
-        transition: 0.3s;
-        color: $paragraph-color;
-        text-decoration: none;
-        text-transform: capitalize;
-        &:hover {
-          color: $secondary-color;
-        }
+    }
+    a {
+      transition: 0.3s;
+      color: $paragraph-color;
+      text-decoration: none;
+      text-transform: capitalize;
+      &:hover {
+        color: $secondary-color;
       }
     }
     .right-side {
