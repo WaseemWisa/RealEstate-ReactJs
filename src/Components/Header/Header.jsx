@@ -14,7 +14,7 @@ import { NavLink } from 'react-router-dom';
 
 function Header() {
   const [opened, { open, close }] = useDisclosure(false);
-  const [first, setfirst] = useState(true)
+  const [first, setfirst] = useState(false)
   return (
     <header id='header' className='main'>
       <div className="container">

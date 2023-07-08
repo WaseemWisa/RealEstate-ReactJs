@@ -27,7 +27,6 @@ function App() {
 
   return (
 
-    <MantineProvider withNormalizeCSS withGlobalStyles>
       <MyContext.Provider value={{value , setValue}}>
         <Routes>
           <Route  element={<MainLayout/>}>
@@ -41,7 +40,6 @@ function App() {
           </Route>
         </Routes>
       </MyContext.Provider>
-    </MantineProvider>
   )
 }
 
