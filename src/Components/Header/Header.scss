@@ -73,6 +73,7 @@ a {
 }
 .drawer-main {
   z-index: 2000;
+  position: relative;
 }
 .drawer-icons {
   @include Flex(start, null);
@@ -86,7 +87,10 @@ a {
     .icon {
       border: 2px solid #ddd;
       margin-bottom: 10px;
-      padding: 1rem;
+      color: palevioletred;
+      width: 40px;
+      height: 40px;
+      padding: 0.5rem;
     }
   }
 }
