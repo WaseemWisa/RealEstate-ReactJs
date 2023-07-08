@@ -22,11 +22,11 @@ function Header() {
           <img src={img} alt="" />
         </div>
         <ul className="middle-side side">
-          <li><NavLink to="/">home</NavLink></li>
-          <li><NavLink to="/about">about</NavLink></li>
-          <li><NavLink to="/shop">shop</NavLink></li>
-          <li><NavLink to="/blog">blog</NavLink></li>
-          <li><NavLink to="/contact">contact</NavLink></li>
+          <li><NavLink to="/" >home</NavLink></li>
+          <li><NavLink to="/about" >about</NavLink></li>
+          <li><NavLink to="/shop" >shop</NavLink></li>
+          <li><NavLink to="/blog" >blog</NavLink></li>
+          <li><NavLink to="/contact" >contact</NavLink></li>
         </ul>
         <div className="right-side side">
           <span><BiSearch/></span>
@@ -45,11 +45,11 @@ function Header() {
           className='input-search'
         />
         <ul className="drawer-side">
-          <li><NavLink to="/">home</NavLink></li>
-          <li><NavLink to="/about">about</NavLink></li>
-          <li><NavLink to="/shop">shop</NavLink></li>
-          <li><NavLink to="/blog">blog</NavLink></li>
-          <li><NavLink to="/contact">contact</NavLink></li>
+          <li><NavLink to="/" onClick={() => close(true)}>home</NavLink></li>
+          <li><NavLink to="/about" onClick={() => close(true)}>about</NavLink></li>
+          <li><NavLink to="/shop" onClick={() => close(true)}>shop</NavLink></li>
+          <li><NavLink to="/blog" onClick={() => close(true)}>blog</NavLink></li>
+          <li><NavLink to="/contact" onClick={() => close(true)}>contact</NavLink></li>
         </ul>
         <div className="drawer-icons">
           <span><BiSearch className='icon'/> Search</span>

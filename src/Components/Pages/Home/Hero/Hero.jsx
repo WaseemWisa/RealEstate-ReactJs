@@ -1,21 +1,12 @@
 import { Carousel } from '@mantine/carousel';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
 import './Hello.scss'
-
+import 'swiper/css';
 import img from '../../../../Assets/images/home-slider.png';
 
 function Hero() {
-  const data = [
-    { value: 'react', label: 'React' },
-    { value: 'ng', label: 'Angular' },
-    { value: 'svelte', label: 'Svelte' },
-    { value: 'vue', label: 'Vue' },
-    { value: 'riot', label: 'Riot' },
-    { value: 'next', label: 'Next.js' },
-    { value: 'blitz', label: 'Blitz.js' },
-  ];
   return (
-    <div id="hero" className="sec">
+    <div id="hero" className="">
       <div className="container">
         <Carousel
           height="100%"
@@ -25,7 +16,7 @@ function Hero() {
           slidesToScroll={1}
         >
           <Carousel.Slide>
-            <div className="holder">
+            <div className="holder-carousel">
               <div className="col">
                   <div className="txt">
                     <h1 className="slid-title">
@@ -48,7 +39,7 @@ function Hero() {
             </div>
           </Carousel.Slide>
           <Carousel.Slide>
-            <div className="holder">
+            <div className="holder-carousel">
               <div className="col">
                   <div className="txt">
                     <h1 className="slid-title">
@@ -71,7 +62,6 @@ function Hero() {
             </div>
           </Carousel.Slide>
         </Carousel>
-
       </div>
     </div>
   )

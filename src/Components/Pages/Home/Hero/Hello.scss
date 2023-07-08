@@ -5,10 +5,13 @@
   height: 450px;
   position: relative;
   .container  {
-    .holder {
+    .holder-carousel {
       height: 100%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      @include BreakPoints(sm) {
+        grid-template-columns: repeat(1, 1fr);
+      }
       align-items: center;
       img {
         width: 100%;

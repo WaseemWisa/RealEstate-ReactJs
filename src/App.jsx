@@ -1,4 +1,5 @@
 import React, { createContext , useState} from 'react';
+import { MantineProvider } from '@mantine/core';
 import { Routes , Route} from 'react-router-dom';
 /*  Css */
 import './Styles/index.scss'
@@ -25,20 +26,22 @@ function App() {
   
 
   return (
-    <MyContext.Provider value={{value , setValue}}>
-      <Routes>
-        <Route  element={<MainLayout/>}>
-          <Route index path='/' element={<Home/>} />
-          <Route  path='/about' element={<About/>} />
-          <Route  path='/blog' element={<News/>} />
-          <Route  path='/contact' element={<Contact/>} />
-          <Route  path='/shop' element={<Shop/>} />
-          <Route  path='/register' element={<Register/>} />
-          <Route  path='*' element={<Error/>} />
-        </Route>
-      </Routes>
-    </MyContext.Provider>
 
+    <MantineProvider withNormalizeCSS withGlobalStyles>
+      <MyContext.Provider value={{value , setValue}}>
+        <Routes>
+          <Route  element={<MainLayout/>}>
+            <Route index path='/' element={<Home/>} />
+            <Route  path='/about' element={<About/>} />
+            <Route  path='/blog' element={<News/>} />
+            <Route  path='/contact' element={<Contact/>} />
+            <Route  path='/shop' element={<Shop/>} />
+            <Route  path='/register' element={<Register/>} />
+            <Route  path='*' element={<Error/>} />
+          </Route>
+        </Routes>
+      </MyContext.Provider>
+    </MantineProvider>
   )
 }
 
